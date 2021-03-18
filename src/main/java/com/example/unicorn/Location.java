@@ -11,7 +11,7 @@ public class Location {
     public String name;
 
     @OneToMany(mappedBy = "location")
-    public List<Dinosaur> dinosaurs;
+    public List<String> dinosaurs;
     public Location() {}
 
     public Location(String environment, String name) {

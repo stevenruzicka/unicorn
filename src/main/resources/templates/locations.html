@@ -10,14 +10,19 @@
     <li th:each="location : ${locations}">
         <span th:text="${location}"></span>
         <form method="POST" th:action="${'/locations/' + location.id + '/unicorns'}">
-            <input name="color" />
-            <input name="name" />
+            <label for="unicornId">Unicorn to move</label>
+            <select name="unicornId">
+                <span th:each="unicorn : ${unicorns}">
+                    <option th:value="${unicorn.id}" th:text="${unicorn}"></option>
+                </span>
+            </select>
             <input type="submit" />
         </form>
     </li>
 </ul>
 <h2>Add a location!</h2>
 <form action="/locations" method="POST">
+    <label for="name">Location name</label>
     <input name="name" />
     <input type="submit" />
 </form>

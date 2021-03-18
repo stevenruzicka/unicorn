@@ -39,9 +39,8 @@ public class LocationController {
 
     @RequestMapping(value="/locations/{locationId}/unicorns", method=RequestMethod.POST)
     public RedirectView addUnicorn(@PathVariable long locationId,
-                                    @RequestParam String color,
-                                    @RequestParam String name) {
-        Unicorn newUnicorn = new Unicorn(color, name);
+                                    @RequestParam long unicornId){
+        Unicorn newUnicorn = unicornRepository.findById(unicornId).get();
         newUnicorn.location = locationRepo.findById(locationId).get();
         unicornRepository.save(newUnicorn);
         return new RedirectView("/locations");

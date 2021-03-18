@@ -28,36 +28,43 @@
     </tbody>
 </table>
 
-<h2>Move a unicorn:</h2>
-<ul>
-    <li th:each="location : ${locations}">
-        <span th:text="${location.name}"></span>
-        <form method="POST" th:action="${'/locations/' + location.id + '/unicorns'}">
-            <label for="unicornId">Unicorn to move</label>
-            <select name="unicornId">
+<section>
+    <h2>Move a unicorn:</h2>
+    <ul>
+        <li th:each="location : ${locations}">
+            <span th:text="${location.name}"></span>
+            <form method="POST" th:action="${'/locations/' + location.id + '/unicorns'}">
+                <label for="unicornId">Unicorn to move</label>
+                <select name="unicornId">
                 <span th:each="unicorn : ${unicorns}">
                     <option th:value="${unicorn.id}" th:text="${unicorn}"></option>
                 </span>
-            </select>
-            <input type="submit" />
-        </form>
-    </li>
-</ul>
+                </select>
+                <input type="submit" />
+            </form>
+        </li>
+    </ul>
+</section>
 
-<h2>Add a unicorn:</h2>
-<form action="/unicorns" method="POST">
-    <label for="name">Name</label>
-    <input name="name" />
-    <label for="color">Color</label>
-    <input name="color" />
-    <input type="submit" />
-</form>
+<section>
+    <h2>Add a unicorn:</h2>
+    <form action="/unicorns" method="POST">
+        <label for="name">Name</label>
+        <input name="name" />
+        <label for="color">Color</label>
+        <input name="color" />
+        <input type="submit" />
+    </form>
+</section>
 
-<h2>Add a location:</h2>
-<form action="/locations" method="POST">
-    <label for="name">Location name</label>
-    <input name="name" />
-    <input type="submit" />
-</form>
+<section>
+    <h2>Add a location:</h2>
+    <form action="/locations" method="POST">
+        <label for="name">Location name</label>
+        <input name="name" />
+        <input type="submit" />
+    </form>
+</section>
+
 </body>
 </html>

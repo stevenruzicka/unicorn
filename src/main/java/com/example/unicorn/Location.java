@@ -18,6 +18,6 @@ public class Location {
     }
 
     public String toString() {
-        return this.name + " with " + (this.unicorns != null ? this.unicorns.size() + " unicorns" : "by themself");
+        return this.name + " (" + ((this.unicorns != null && this.unicorns.size() > 0) ? this.unicorns.size() + " unicorns)" : "(by themself)");
     }
 }

@@ -31,7 +31,7 @@
 <h2>Move a unicorn:</h2>
 <ul>
     <li th:each="location : ${locations}">
-        <span th:text="${location}"></span>
+        <span th:text="${location.name}"></span>
         <form method="POST" th:action="${'/locations/' + location.id + '/unicorns'}">
             <label for="unicornId">Unicorn to move</label>
             <select name="unicornId">

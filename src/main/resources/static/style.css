@@ -31,6 +31,9 @@ table#unicorn-list,  form {
 
 }
 
+ul li {
+    list-decoration: none;
+}
 p, .ranch-title {
   width: 500px;
   text-align: center;

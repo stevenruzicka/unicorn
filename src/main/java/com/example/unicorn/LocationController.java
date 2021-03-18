@@ -27,7 +27,7 @@ public class LocationController {
         //m.addAttribute("unicorns", unicornRepo.findAll());
         m.addAttribute("locations", locations);
         //m.addAttribute("locations", locationRepo.findAll());
-        return "locations";
+        return "location";
     }
 
     @RequestMapping(value="/locations", method=RequestMethod.POST)

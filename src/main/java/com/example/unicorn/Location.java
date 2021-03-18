@@ -7,19 +7,17 @@ public class Location {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     public long id;
-    public String environment;
     public String name;
 
     @OneToMany(mappedBy = "location")
-    public List<String> dinosaurs;
+    public List<Unicorn> unicorns;
     public Location() {}
 
-    public Location(String environment, String name) {
-        this.environment = environment;
+    public Location(String name) {
         this.name = name;
     }
 
     public String toString() {
-        return this.name + " with " + this.dinosaurs;
+        return this.name + " with " + this.unicorns;
     }
 }

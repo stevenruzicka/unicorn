@@ -17,15 +17,8 @@ public class LocationController {
     @Autowired
     UnicornRepository unicornRepository;
 
-    @RequestMapping(value="/locations", method= RequestMethod.GET)
+    @RequestMapping(value="/", method= RequestMethod.GET)
     public String index(Model m) {
-//        Location[] locations = new Location[]{
- //               new Location("Barn"),
-  //              new Location("Pasture")
-   //     };
-        // display them on a page
-        //m.addAttribute("unicorns", unicornRepo.findAll());
-        //m.addAttribute("locations", locations);
         m.addAttribute("unicorns", unicornRepository.findAll());
         m.addAttribute("locations", locationRepo.findAll());
         return "locations";

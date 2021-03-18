@@ -3,9 +3,26 @@
 <head>
     <title>Locations</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
 <h1>Locations!</h1>
+<table id="unicorn-list">
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            Color
+        </th>
+    </thead>
+    <tbody>
+        <tr th:each="unicorn : ${unicorns}">
+            <td th:text="${unicorn.name}"></td>
+            <td th:text="${unicorn.color}"></td>
+        </tr>
+    </tbody>
+</table>
 <ul>
     <li th:each="location : ${locations}">
         <span th:text="${location}"></span>

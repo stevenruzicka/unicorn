@@ -18,13 +18,7 @@ public class UnicornController {
 
     @RequestMapping(value="/unicorns", method=RequestMethod.GET)
     public String index(Model m) {
-        //Unicorn[] unicorns = new Unicorn[]{
-        //        new Unicorn("Red",  "Fred"),
-        //        new Unicorn("Blue","George")
-        //};
-        // display them on a page
         m.addAttribute("unicorns", unicornRepo.findAll());
-        //m.addAttribute("unicorns", unicorns);
         return "unicornIndex";
     }
 

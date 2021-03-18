@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Locations</title>
+    <title>Unicorn Ranch</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
-<h1>Locations!</h1>
+<h1 class="ranch-title">Unicorn Ranch</h1>
 <table id="unicorn-list">
     <thead>
         <th>
@@ -27,6 +27,8 @@
         </tr>
     </tbody>
 </table>
+
+<h2>Move a unicorn:</h2>
 <ul>
     <li th:each="location : ${locations}">
         <span th:text="${location}"></span>

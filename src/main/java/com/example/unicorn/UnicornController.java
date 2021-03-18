@@ -18,7 +18,6 @@ public class UnicornController {
 
     @RequestMapping(value="/unicorns", method=RequestMethod.GET)
     public String index(Model m) {
-        // grab all the dinosaurs from the database
         Unicorn[] unicorns = new Unicorn[]{
                 new Unicorn("Red",  "Fred"),
                 new Unicorn("Blue","George")
@@ -33,8 +32,8 @@ public class UnicornController {
     public RedirectView create(
             @RequestParam String color,
             @RequestParam String name) {
-        Dinosaur newDino = new Unicorn(color, name);
-        dinoRepo.save(newDino);
+        Unicorn newUnicorn = new Unicorn(color, name);
+        unicornRepo.save(newUnicorn);
         return new RedirectView("/unicorns");
     }
 

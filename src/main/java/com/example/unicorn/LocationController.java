@@ -26,6 +26,7 @@ public class LocationController {
         // display them on a page
         //m.addAttribute("unicorns", unicornRepo.findAll());
         //m.addAttribute("locations", locations);
+        m.addAttribute("unicorns", unicornRepository.findAll());
         m.addAttribute("locations", locationRepo.findAll());
         return "locations";
     }

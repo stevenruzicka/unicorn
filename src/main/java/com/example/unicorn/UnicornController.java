@@ -28,7 +28,7 @@ public class UnicornController {
             @RequestParam String name) {
         Unicorn newUnicorn = new Unicorn(color, name);
         unicornRepo.save(newUnicorn);
-        return new RedirectView("/unicorns");
+        return new RedirectView("/");
     }
 
 }

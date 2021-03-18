@@ -28,7 +28,7 @@ public class LocationController {
     public RedirectView create(@RequestParam String name) {
         Location newLocation = new Location(name);
         locationRepo.save(newLocation);
-        return new RedirectView("/locations");
+        return new RedirectView("/");
     }
 
     @RequestMapping(value="/locations/{locationId}/unicorns", method=RequestMethod.POST)
@@ -37,7 +37,7 @@ public class LocationController {
         Unicorn newUnicorn = unicornRepository.findById(unicornId).get();
         newUnicorn.location = locationRepo.findById(locationId).get();
         unicornRepository.save(newUnicorn);
-        return new RedirectView("/locations");
+        return new RedirectView("/");
 
     }
 }

@@ -15,11 +15,15 @@
         <th>
             Color
         </th>
+        <th>
+            Location
+        </th>
     </thead>
     <tbody>
         <tr th:each="unicorn : ${unicorns}">
             <td th:text="${unicorn.name}"></td>
             <td th:text="${unicorn.color}"></td>
+            <td th:text="${unicorn.location}"></td>
         </tr>
     </tbody>
 </table>

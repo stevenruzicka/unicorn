@@ -18,6 +18,6 @@ public class Location {
     }
 
     public String toString() {
-        return this.name + " with " + this.unicorns;
+        return this.name + " with " + (this.unicorns != null ? this.unicorns.count() + " unicorns" : "no unicorns");
     }
 }

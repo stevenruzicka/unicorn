@@ -29,6 +29,7 @@ table#unicorn-list,  section{
   background: pink;
   padding: 20px;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 ul li {
